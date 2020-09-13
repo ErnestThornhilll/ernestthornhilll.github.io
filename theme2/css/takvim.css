@@ -1,0 +1,63 @@
+@import url('main2.css');
+@import url('hakkimizda.css');
+@import url('iptaldevam.css');
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 1fr 1.2fr 1.5fr;
+	grid-template-rows: 1fr 10fr 3fr 2fr;
+	grid-template-areas: 
+	"main main header"
+	"takvim takvim side"
+	"takvim takvim side"
+	"footer footer footer"
+	;
+	/*height: 100vh;*/
+	min-width: 700px;
+	margin: 2em; 
+}
+
+section.takvim{
+	grid-area: takvim;
+	background: #EAD637;
+	padding: 25px;
+}
+
+section.takvim h2{
+	color: rgb(138 28 124);
+	margin-bottom: 10px;
+	border-left: 5px solid #8a1c7c;
+	background: rgba(255,255,255,0.2);
+	padding: 7px;
+	letter-spacing: .5px;
+}
+section.takvim blockquote{
+	margin-top: 20px;
+}
+section.takvim blockquote p{
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+section.takvim blockquote:before{
+	font-family: "Font Awesome 5 Free";
+  	font-weight: 900;
+  	content: "\f10d";
+	padding:0 5px;
+	color: #303036;
+	float: left;
+	padding-right: 10px;
+    margin-top: -2px;
+}
+section.takvim blockquote:after{
+	font-family: "Font Awesome 5 Free";
+  	font-weight: 900;
+  	content: "\f10e";
+	padding:0 5px;
+	color: #303036;
+	float: right;
+    margin-top: -29px;
+}
+section.takvim .ajanda{
+	margin-left: -16px;
+	margin-top: 20px;
+}

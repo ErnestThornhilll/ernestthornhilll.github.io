@@ -1,0 +1,97 @@
+@import url('main2.css');
+@import url('hakkimizda.css');
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 1fr 1.2fr 1.5fr;
+	grid-template-rows: 1fr 10fr 3fr 2fr;
+	grid-template-areas: 
+	"main main header"
+	"iptaldevam iptaldevam side"
+	"iptaldevam iptaldevam side"
+	"footer footer footer"
+	;
+	/*height: 100vh;*/
+	min-width: 700px;
+	margin: 2em; 
+}
+
+section.iptaldevam{
+	grid-area: iptaldevam;
+	background: #EAD637;
+	padding: 25px;
+}
+
+section.iptaldevam h2{
+	color: rgb(138 28 124);
+	margin-bottom: 10px;
+	border-left: 5px solid #8a1c7c;
+	background: rgba(255,255,255,0.2);
+	padding: 7px;
+	letter-spacing: .5px;
+}
+section.iptaldevam p{
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+section.iptaldevam ul li{
+	padding: 5px 10px;
+	list-style: none;
+}
+
+section.iptaldevam ul li::before{
+	font-family: "Font Awesome 5 Free";
+  	font-weight: 900;
+  	content: "\f105";
+	padding:0 5px;
+	color: #303036;
+}
+section.iptaldevam ul li a{
+	font-weight: 700;
+	color: #FC5130;
+	letter-spacing: 0.5px;
+}
+section.iptaldevam ul li a:hover{
+	color: #8A1C7C;
+}
+section.iptaldevam table{
+	width: 100%;
+    background: #ffffff12;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 10px;
+}
+section.iptaldevam table thead{
+	border-bottom: 1px solid black;
+}
+section.iptaldevam table tbody{
+	margin-top: 10px;
+}
+section.iptaldevam table thead tr,
+section.iptaldevam table tbody tr{
+	display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    transition: all .3s ease;
+}
+section.iptaldevam table thead tr:hover,
+section.iptaldevam table tbody tr:hover{
+	background: #8a1c7c9c;
+    color: white;
+    border-radius: 5px;
+}
+section.iptaldevam table thead th,
+section.iptaldevam table tbody td{
+	width: 33%;
+	text-align: left;
+}
+section.iptaldevam table thead th:not(:last-child),
+section.iptaldevam table tbody td:not(:last-child){
+	border-right: 1px solid black;
+}
+section.iptaldevam table thead th:not(:first-child),
+section.iptaldevam table tbody td:not(:first-child){
+	padding-left: 5px;
+}

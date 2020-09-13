@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>22dakika.org | Hayatın anlamını dizilerde arayanların sitesi</title>
+	<link rel="stylesheet" href="css/ayrıntılı-ara.css">
+	<!-- Google Font -->
+	<link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/1735205657.js" crossorigin="anonymous"></script>
+
+	<!-- Hamburger  -->
+	<script src="js/hamburger.js" type="text/javascript" charset="utf-8" async defer></script>
+
+	<!-- Collapse  -->
+	<script src="js/collapse.js" type="text/javascript" charset="utf-8" async defer></script>
+
+</head>
+<body>
+
+	<div class="grid-container">
+		<!-- Main -->
+		<main>
+			<h1>
+				<a href="index.html">
+					22dakika.org
+				</a>
+			</h1>
+		</main>
+
+		<!-- ayrintili-ara -->
+		<section class="ayrintili-ara">
+			<h2 class="ayrintili-ara-title">
+				Ayrıntılı Ara
+			</h2>
+			
+			<div class="oy-arama-form">
+            <form name="input" action="?name=ayrintili-ara" id="input" method="post" onsubmit="return validateSearch_real()">
+              <div class="oy-arama-major-field">
+                <h3>Kelimelerinin...</h3>
+
+                <div class="oy-arama-input-field">
+                  <div class="oy-arama-text"><p>hepsinin geçtiği:</p></div>
+                  <div class="oy-arama-box">
+                    <input class="oy-arama-input-big" name="words_included" type="text"/>
+                  </div>
+                </div>
+
+                <div class="oy-arama-input-field">
+                  <div class="oy-arama-text"><p>yan yana geçtiği:</p></div>
+                  <div class="oy-arama-box">
+                    <input class="oy-arama-input-big" name="words_ordered" type="text"/>
+                  </div>
+                </div>
+
+                <div class="oy-arama-input-field">
+                  <div class="oy-arama-text"><p>en az birinin geçtiği:</p></div>
+                  <div class="oy-arama-box">
+                    <input class="oy-arama-input-big" name="words_at_least_one" type="text"/>
+                  </div>
+                </div>
+
+                <div class="oy-arama-input-field">
+                  <div class="oy-arama-text"><p>geçmediği:</p></div>
+                  <div class="oy-arama-box">
+                    <input class="oy-arama-input-big" name="words_excluded" type="text"/>
+                  </div>
+                </div>
+              </div>
+              <div class="oy-divider"></div>
+              <div class="oy-arama-major-field">
+                <h3>Sonuçların...</h3>
+                <div class="oy-arama-input-field">
+                  <div class="oy-arama-text"><p>yazarı:</p></div>
+                  <div class="oy-arama-box">
+                    <input class="oy-arama-input-mid" name="author_slug" type="username"/>
+                  </div>
+                </div>
+
+                <div class="oy-arama-input-field">
+                  <div class="oy-arama-text"><p>yayınlanma tarih aralığı:</p></div>
+                  <div class="oy-arama-box">
+                    <input id="txtFromDate" class="custom_date oy-arama-input-small" name="date_begin" value="" type="text"/> - <input id="txtToDate" class="custom_date oy-arama-input-small" name="date_end" value="" type="text"/>
+                  </div>
+                </div>
+
+                <div class="oy-arama-input-field">
+                  <div class="oy-arama-text"><p>minimum tutulma sayısı:</p></div>
+                  <div class="oy-arama-box">
+                    <input class="oy-arama-input-small-small" name="likes" pattern="\d*" type="number" value="0">
+                  </div>
+                </div>
+                <div class="oy-arama-input-field">
+                  <div class="oy-arama-text"><p>arama yeri:</p></div>
+                  <div class="oy-arama-box">
+                    <select class="oy-arama-select" id="oy-arama-tur-js-icin" name="search_type">
+                      <option value="posts">Yazılar</option>
+                      <option value="comments">Yorumlar</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="oy-arama-input-field">
+                  <div class="oy-arama-text"><p>sırası:</p></div>
+                  <div class="oy-arama-box">
+                    <select class="oy-arama-select" name="date_order">
+                      <option value="desc">Yeniden eskiye</option>
+                      <option value="asc">Eskiden yeniye</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="oy-divider"></div>
+              <div class="oy-arama-major-field" id="oy-etiket-just-for-yazi">
+                <h3>Etiketlerinin...</h3>
+                <div class="oy-arama-input-field">
+                  <div class="oy-arama-text"><p>en az birinin bulunduğu:</p></div>
+                  <div class="oy-arama-box">
+                    <input placeholder="(virgülle ayrılmış)" class="oy-arama-big" type="text" name="inc_tags"/>
+                  </div>
+                </div>
+                <div class="oy-arama-input-field">
+                  <div class="oy-arama-text"><p>hepsinin bulunduğu:</p></div>
+                  <div class="oy-arama-box">
+                    <input placeholder="(virgülle ayrılmış)" class="oy-arama-big" type="text" name="inc_tags_all"/>
+                  </div>
+                </div>
+              </div>
+              <div class="oy-divider-borderless"></div>
+              <div class="oy-arama-major-field">
+                <div class="oy-arama-input-field">
+                  <input class="btn" value="Ara" type="submit">
+                </div>
+              </div>
+            <input type="hidden" name="oy_page" value="1"/>
+            </form>
+
+          </div>
+
+		</section>
+
+
+		<section class="footer">
+			<!-- 
+			<div class="pagination">
+				<nav class="pa">
+					<span class="text">NEXT</span>
+					<div class="left pagi">
+						<a href="" class="prev"></a>
+						<a href="">1</a>
+						<a href="">2</a>
+						<a href="">3</a>
+						<span class="line"></span>
+					</div>
+					<div class="right pagi">
+						<a href="" class="next"></a>
+						<a href="">4</a>
+						<a href="">5</a>
+						<a href="">6</a>
+						<span class="line"></span>
+					</div>
+				</nav>
+			</div>
+			 -->
+
+		</section>
+
+		<!-- Header -->
+		<header>
+			<nav>
+				<ul>
+					<li>
+						<a href="index.html" title="">
+							Anasayfa
+						</a>
+					</li>
+					<li>
+						<a href="hakkimizda.html" title="">
+							Hakkımızda
+						</a>
+					</li>
+				</ul>
+			</nav>
+
+			<section class="wrapper">
+				<section class="material-design-hamburger">
+					<button class="material-design-hamburger__icon">
+						<span class="material-design-hamburger__layer"></span>
+					</button>
+				</section>
+
+				<section class="menu menu--off">
+					<nav>
+						<ul>
+							<li>
+								<a href="iptaldevam.html" title="">
+									İptal/Devam
+								</a>
+							</li>
+							<li>
+								<a href="takvim.html" title="">
+									Takvim
+								</a>
+							</li>
+							<li class="dropdown">
+								<a  href="" title="">
+									<i class="fas fa-caret-left"></i> Kategoriler
+									<div class="dropdown-content">
+										<a href="uncategorized.html">Bildiri</a>
+										<a href="tanitim.html">Tanıtım</a>
+										<a href="tanitim.html">Mini Tanıtım</a>
+										<a href="tanitim.html">Mini Bildiri</a>
+										<a href="tanitim.html">Kısa Haber</a>
+										<a href="tanitim.html">Video</a>
+										<a href="tanitim.html">Biyografi</a>
+										<a href="tanitim.html">Özel Dosya</a>
+										<a href="tanitim.html">Alternatif</a>
+										<a href="tanitim.html">İnceleme</a>
+										<a href="tanitim.html">Anime</a>
+									</div>
+								</a>
+							</li>
+							<li>
+								<a href="peyton.html" title="">
+									Dizi Listesi
+								</a>
+							</li>
+							<li  class="dropdown">
+								<a href="" title="">
+									<i class="fas fa-caret-left"></i>
+									22viki
+									<ul class="dropdown2">
+										<li class="dropdown3">
+											<a href=""><i class="fas fa-caret-left"></i> Çokomelli</a>
+											<ul class="dropdown-content2">
+												<a href="televizyon-sozlugu">Televizyon Sözlüğü</a>
+												<a href="televizyon-sozlugu">Yazarlara Öneriler</a>
+												<a href="televizyon-sozlugu">Ayrıntılı Yazılar</a>
+											</ul>
+										</li>
+
+										<li class="dropdown4">
+											<a href=""><i class="fas fa-caret-left"></i> Sezonluk</a>
+											<ul class="dropdown-content2">
+												<a href="televizyon-sozlugu">Televizyon Sözlüğü</a>
+												<a href="televizyon-sozlugu">Yazarlara Öneriler</a>
+												<a href="televizyon-sozlugu">Ayrıntılı Yazılar</a>
+											</ul>
+										</li>
+
+										<li class="dropdown5">
+											<a href=""><i class="fas fa-caret-left"></i> Reytingle ve ABD</a>
+											<ul class="dropdown-content2">
+												<a href="televizyon-sozlugu">Televizyon Sözlüğü</a>
+												<a href="televizyon-sozlugu">Yazarlara Öneriler</a>
+												<a href="televizyon-sozlugu">Ayrıntılı Yazılar</a>
+											</ul>
+										</li>
+
+										<li class="dropdown6">
+											<a href=""><i class="fas fa-caret-left"></i> Güncel</a>
+											<ul class="dropdown-content2">
+												<a href="televizyon-sozlugu">Televizyon Sözlüğü</a>
+												<a href="televizyon-sozlugu">Yazarlara Öneriler</a>
+												<a href="televizyon-sozlugu">Ayrıntılı Yazılar</a>
+											</ul>
+										</li>
+
+										<li class="dropdown7">
+											<a href=""><i class="fas fa-caret-left"></i> Debe</a>
+											<ul class="dropdown-content2">
+												<a href="televizyon-sozlugu">Televizyon Sözlüğü</a>
+												<a href="televizyon-sozlugu">Yazarlara Öneriler</a>
+												<a href="televizyon-sozlugu">Ayrıntılı Yazılar</a>
+											</ul>
+										</li>
+
+										<li class="dropdown8">
+											<a href=""><i class="fas fa-caret-left"></i> Bilgilenelim</a>
+											<ul class="dropdown-content2">
+												<a href="televizyon-sozlugu">Televizyon Sözlüğü</a>
+												<a href="televizyon-sozlugu">Yazarlara Öneriler</a>
+												<a href="televizyon-sozlugu">Ayrıntılı Yazılar</a>
+											</ul>
+										</li>
+									</ul>
+								</a>
+							</li>
+							<li>
+								<a href="ayrintili-ara.html" title="">
+									Ayrıntılı Arama
+								</a>
+							</li>
+							<li>
+								<a href="" title="">
+									Giriş Yap
+								</a>
+							</li>
+							<li>
+								<a href="" title="">
+									Kayıt Ol
+								</a>
+							</li>
+						</ul>
+					</nav>
+				</section>
+
+			</section>
+		</header>
+
+		<!-- Side -->
+		<div class="side">
+			<!-- box -->
+			<div class="box">
+				<div class="boxInputs">
+					<input type="search" name="yazilar" value="" placeholder="Yazılarda Ara">
+					<input type="search" name="dizi" value="" placeholder="Dizi Tanıtımına Git">
+				</div>
+				<div class="boxSubmits">
+					<a href="" class="btn">Ara!</a>
+					<a href="">Tüm Diziler</a>
+				</div>
+			</div>
+
+			<!-- comment -->
+			<div class="comment">
+				<div class="commentTitle">
+					<h3>Kim ne demiş ayol ?</h3>
+				</div>
+				<nav>
+					<ul>
+						<li>
+							<a class="commentName" href="" title="">
+								Gossip Girl
+							</a>
+							<span class="commentUnread">
+								11
+							</span>
+							<span class="commentAll">
+								11
+							</span>
+						</li>
+
+						<li>
+							<a class="commentName" href="" title="">
+								Atiye
+							</a>
+							<span class="commentUnread">
+								31
+							</span>
+							<span class="commentAll">
+								31
+							</span>
+						</li>
+
+						<li>
+							<a class="commentName" href="" title="">
+								Atiye
+							</a>
+							<span class="commentUnread">
+								31
+							</span>
+							<span class="commentAll">
+								31
+							</span>
+						</li>
+
+						<li>
+							<a class="commentName" href="" title="">
+								Atiye
+							</a>
+							<span class="commentUnread">
+								31
+							</span>
+							<span class="commentAll">
+								31
+							</span>
+						</li>
+
+						<li>
+							<a class="commentName" href="" title="">
+								Atiye
+							</a>
+							<span class="commentUnread">
+								31
+							</span>
+							<span class="commentAll">
+								31
+							</span>
+						</li>
+
+						<li>
+							<a class="commentName" href="" title="">
+								Atiye
+							</a>
+							<span class="commentUnread">
+								31
+							</span>
+							<span class="commentAll">
+								31
+							</span>
+						</li>
+						<a href="" class="btn">Devamı</a>
+					</ul>
+				</nav>
+			</div>
+
+			<!-- socials -->
+			<div class="socials">
+				<h3 class="socialTitle">
+					Bizi Diğer Ağlarda Takip Edin
+				</h3>
+				<div class="social">
+					<a title="Posket" href="https://22dakika.org/wp-content/uploads/2014/11/podcast-yeni.jpg">
+						<i class="fas fa-podcast"></i>
+					</a>
+
+					<a title="İnstagram" href="https://www.instagram.com/22dakikaorg/">
+						<i class="fab fa-instagram"></i>
+					</a>
+
+					<a title="Facebook" href="http://www.facebook.com/22dakika.org">
+						<i class="fab fa-facebook"></i>
+					</a>
+
+					<a title="Twitter" href="https://twitter.com/22dakika">
+						<i class="fab fa-twitter"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

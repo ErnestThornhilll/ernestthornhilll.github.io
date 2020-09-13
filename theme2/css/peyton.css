@@ -1,0 +1,186 @@
+@import url('main2.css');
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 1fr 1.2fr 1.5fr;
+	grid-template-rows: 1fr 10fr 3fr 2fr;
+	grid-template-areas: 
+	"main main header"
+	"peyton peyton side"
+	"peyton peyton side"
+	"footer footer footer"
+	;
+	/*height: 100vh;*/
+	min-width: 700px;
+	margin: 2em; 
+}
+
+section.peyton{
+	grid-area: peyton;
+	background: #EAD637;
+	padding: 25px;
+}
+
+section.peyton h2{
+	color: rgb(138 28 124);
+	margin-bottom: 10px;
+	border-left: 5px solid #8a1c7c;
+	background: rgba(255,255,255,0.2);
+	padding: 7px;
+	letter-spacing: .5px;
+}
+
+section.peyton p{
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+section.peyton blockquote{
+	margin-top: 20px;
+}
+section.peyton blockquote p{
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+section.peyton blockquote:before{
+	font-family: "Font Awesome 5 Free";
+  	font-weight: 900;
+  	content: "\f10d";
+	padding:0 5px;
+	color: #303036;
+	float: left;
+	padding-right: 10px;
+    margin-top: -2px;
+}
+section.peyton blockquote:after{
+	font-family: "Font Awesome 5 Free";
+  	font-weight: 900;
+  	content: "\f10e";
+	padding:0 5px;
+	color: #303036;
+	float: right;
+    margin-top: -29px;
+}
+
+section.peyton .thumbs {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 60px;
+}
+
+section.peyton .thumbs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section.peyton .thumbs-container span{
+	margin-top: 10px;
+    font-weight: 600;
+    letter-spacing: .1px;
+    text-decoration: underline;
+}
+
+section.peyton .thumb1,
+section.peyton .thumb2,
+section.peyton .thumb3 {
+    font-size: 25px;
+    color: #fffaff;
+    display: flex;
+    height: 50px;
+    width: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0px 2px 2px black;
+    text-shadow: 1px 1px 3px black;
+}
+section.peyton  .thumb1{
+	background: green;
+}
+section.peyton  .thumb2{
+	background: yellow;
+	transform: rotate(90deg);
+}
+section.peyton  .thumb3{
+	background: red;
+}
+
+section.peyton ul li{
+	padding: 5px 10px;
+	list-style: none;
+}
+
+section.peyton ul li::before{
+	font-family: "Font Awesome 5 Free";
+  	font-weight: 900;
+  	content: "\f105";
+	padding:0 5px;
+	color: #303036;
+}
+section.peyton ul li a{
+	font-weight: 700;
+	color: #FC5130;
+	letter-spacing: 0.5px;
+}
+section.peyton ul li a:hover{
+	color: #8A1C7C;
+}
+section.peyton table{
+	width: 100%;
+    background: #ffffff12;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    padding: 10px;
+}
+section.peyton table thead{
+	border-bottom: 1px solid black;
+}
+section.peyton table tbody{
+	margin-top: 10px;
+}
+section.peyton table thead tr,
+section.peyton table tbody tr{
+	display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    transition: all .3s ease;
+}
+section.peyton table thead tr:hover,
+section.peyton table tbody tr:hover{
+	background: #8a1c7c9c;
+    color: white;
+    border-radius: 5px;
+}
+section.peyton table thead th,
+section.peyton table tbody td{
+	width: 33%;
+	text-align: left;
+}
+section.peyton table thead th:not(:last-child),
+section.peyton table tbody td:not(:last-child){
+	border-right: 1px solid black;
+}
+section.peyton table thead th:not(:first-child),
+section.peyton table tbody td:not(:first-child){
+	padding-left: 5px;
+}
+
+section.peyton table tbody td .thumb1,
+section.peyton table tbody td .thumb2,
+section.peyton table tbody td .thumb3{
+	height: 20px;
+    width: 20px;
+}
+section.peyton table tbody td .thumb1 i,
+section.peyton table tbody td .thumb2 i,
+section.peyton table tbody td .thumb3 i{
+	font-size: 10px;
+}
+
+section.peyton .pagination .pa{
+	width: auto;
+	margin-top: 30px;
+}

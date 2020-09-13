@@ -1,0 +1,116 @@
+@import url('main2.css');
+
+.grid-container{
+	display: grid;
+	grid-template-columns: 1fr 1.2fr 1.5fr;
+	grid-template-rows: 1fr 10fr 3fr 2fr;
+	grid-template-areas: 
+	"main main header"
+	"ayrintili-ara ayrintili-ara side"
+	"ayrintili-ara ayrintili-ara side"
+	"footer footer footer"
+	;
+	/*height: 100vh;*/
+	min-width: 700px;
+	margin: 2em; 
+}
+
+section.ayrintili-ara{
+	grid-area: ayrintili-ara;
+	background: #EAD637;
+	padding: 25px;
+}
+
+section.ayrintili-ara h2{
+	color: rgb(138 28 124);
+	margin-bottom: 10px;
+	border-left: 5px solid #8a1c7c;
+	background: rgba(255,255,255,0.2);
+	padding: 7px;
+	letter-spacing: .5px;
+}
+
+section.ayrintili-ara p{
+	margin-bottom: 10px;
+	font-size: 18px;
+}
+
+.oy-arama-form {
+    padding: 0 10px;
+    margin-top: 16px;
+}
+
+.oy-arama-form h3 {
+    text-decoration: underline;
+    letter-spacing: 0.5px;
+    font-size: 20px;
+    margin: 10px 0;
+}
+
+.oy-arama-major-field:not(:last-child) {
+    border-bottom: 1px solid #303036;
+    margin-bottom: 5px;
+}
+.oy-arama-major-field:last-child{
+	 border-bottom: none !important;
+}
+
+.oy-arama-input-field {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+input.oy-arama-input-big {
+    width: 400px;
+    border: none;
+    height: 24px;
+    padding: 0 5px;
+}
+input.oy-arama-input-big:focus{
+	outline: none;
+	border-bottom: 2px solid #8a1c7c;
+}
+
+input.oy-arama-input-mid {
+    margin-right: 270px;
+    border: none;
+    height: 24px;
+    padding: 0 5px;
+}
+
+input.oy-arama-input-small-small {
+    margin-right: 184px;
+    border: none;
+    height: 24px;
+    padding: 0 5px;
+}
+input#txtFromDate, input#txtToDate,input.oy-arama-big{
+	 border: none;
+    height: 24px;
+    padding: 0 5px;
+}
+
+input.oy-arama-input-mid:focus,
+input.oy-arama-input-small-small:focus,
+input#txtFromDate:focus, input#txtToDate:focus,
+input.oy-arama-big:focus{
+	outline: none;
+	border-bottom: 2px solid #8a1c7c;
+}
+
+.oy-arama-form .btn{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: #303036;
+		color: white;
+		height: 50px;
+		width: 50px;
+		font-size: 20px;
+		border-radius: 50%;
+		margin-bottom: 14px;
+		border: none;
+		cursor: pointer;
+
+	}
