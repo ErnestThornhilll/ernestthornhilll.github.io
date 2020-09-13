@@ -1,0 +1,57 @@
+.hero{
+	display: flex;
+}
+
+.hero__image{
+	flex: 1;
+	order: 2;
+	position: relative;
+	background-image: url('../images/hero__image2.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	min-height: 280px;
+	min-height: 300px;
+	align-items: center;
+	margin: auto;
+}
+
+/*.hero__image::before{
+	dakika 12:19
+	position: absolute;
+	background-image: url('../images/');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}*/
+
+.hero__text{
+	order:1;
+	text-align: center;
+	flex: 1;
+}
+
+.hero__text h1{
+	font-size: 46px;
+	font-weight: 300;
+	line-height: 1.15;
+	color:  #232325ff;
+	margin-bottom: 24px;
+}
+.hero__text p{
+	line-height: 1.5;
+	margin-bottom: 36px;
+}
+
+@media screen and (max-width: 790px) {
+	.hero{
+		display: block;
+
+	}
+	.hero__text h1{
+		font-size: 37px;
+	}
+	.hero__text{
+		text-align: left;
+	}
+}

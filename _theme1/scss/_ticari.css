@@ -1,0 +1,109 @@
+.container-full{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: auto;
+	height: auto;
+	display: block;
+}
+
+.container-full .ticari__image{
+	background-image: url('../images/hakkımızda__cover.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 35vh;
+	position: relative;
+	box-shadow: inset 0 0 10000px 20px #000000c2;
+}
+
+.ticari__title{
+	position: absolute;
+	color: #998252ff !important;
+	bottom: 50%;
+	transform: translate(0, -50%);
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+h1.--title {
+	color: #fff8dd;
+	font-weight: 600;
+	font-size: 50px;
+	text-shadow: -4px -4px 10px #1d2120;
+}
+
+.ticari__aciklamalar{
+
+}
+
+.ticari__logo {
+	text-align: center;
+}
+
+
+.ticari__logo img{
+	height: 50px;
+}
+
+.ticari__aciklama{
+	display: grid;
+	grid-template-areas: 
+	"aciklama"
+	"ozellik"
+	"fiyat"
+	"al";
+}
+.ticari__aciklama .aciklama-icerik{
+	grid-area: aciklama;
+}
+.ticari__aciklama .aciklama-ozellik{
+	    grid-area: ozellik;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
+    gap: 20px;
+}
+.ticari__aciklama .aciklama-ozellik .ozellik1 h3{
+	padding-bottom: 10px;
+    border-bottom: 2px solid;
+    margin-bottom: 5px;
+}
+.ticari__aciklama .aciklama-ozellik .ozellik1 ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.ticari__aciklama .fiyat{
+	grid-area: fiyat;
+	font-size: 20px;
+	text-align: center;
+	margin-top: 10px;
+}
+.ticari__aciklama .al{
+	grid-area: al;
+	font-size: 36px;
+	text-align: center;
+	margin-top: 10px;
+}
+.ticari__aciklama .al a{
+	    display: inline-block;
+    padding: 10px 20px;
+    background: #232325;
+    color: wheat;
+    border-radius: 23px;
+}
+.ticari__aciklama .al a:hover{
+	color: white;
+}
+.ticari__aciklama .fiyat span{
+	font-size: 36px;
+	font-weight: 700;
+	color: wheat;
+}
+
+.ticari__aciklama p{
+	color:  #232325ff;
+	font-size: 15px;
+	line-height: 1.2;
+}

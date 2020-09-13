@@ -1,0 +1,12 @@
+/* Kırılma Noktalar */
+@media (min-width: 64em){
+
+}
+
+@media (min-width: 40em){
+	@content;
+}
+
+@media (max-width: 39.9375em){
+	@content;
+}
