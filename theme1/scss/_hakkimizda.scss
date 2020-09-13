@@ -1,0 +1,56 @@
+.container-full{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: auto;
+	height: auto;
+	display: block;
+}
+
+.hakkimizda__image{
+	background-image: url('../images/hakkımızda__cover.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 35vh;
+	position: relative;
+	box-shadow: inset 0 0 10000px 20px #000000c2;
+}
+
+.hakkimizda__title{
+	position: absolute;
+	color: #998252ff !important;
+	bottom: 50%;
+	transform: translate(0, -50%);
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+h1.--title {
+	color: #fff8dd;
+	font-weight: 600;
+	font-size: 50px;
+	text-shadow: -4px -4px 10px #1d2120;
+}
+
+.hakkimizda__aciklamalar{
+
+}
+
+.hakkimizda__logo {
+	text-align: center;
+}
+
+
+.hakkimizda__logo img{
+	height: 50px;
+}
+
+.hakkimizda__aciklama{
+
+}
+
+.hakkimizda__aciklama p{
+	color:  #232325ff;
+	font-size: 15px;
+	line-height: 1.2;
+}

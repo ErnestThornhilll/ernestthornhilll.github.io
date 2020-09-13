@@ -1,0 +1,16 @@
+.tasarimlar__image{
+	background-image: url('../images/tasarım__cover.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 35vh;
+	position: relative;
+	box-shadow: inset 0 0 10000px 20px #000000c2;
+}
+
+.--tasarimlar-title {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 50px;
+    text-shadow: -4px -4px 10px #000000f2;
+}
