@@ -18,18 +18,18 @@
   background: #555; 
 }
 
-@import "_variables.css";
-@import "_mixin.css";
-@import "_animations.css";
-@import "_global.css";
-@import "_header.css";
-@import "_hero.css";
-@import "_feature.css";
-@import "_article.css";
-@import "_footer.css";
-@import "_hakkimizda.css";
-@import "_ticari.css";
-@import "_cozumler.css";
-@import "_tasarimlar.css";
-@import "_destek.css";
-@import "_destek.css";
+@import "_ariables.css";
+@import "mixin.css";
+@import "animations.css";
+@import "global.css";
+@import "header.css";
+@import "hero.css";
+@import "feature.css";
+@import "article.css";
+@import "footer.css";
+@import "hakkimizda.css";
+@import "ticari.css";
+@import "cozumler.css";
+@import "tasarimlar.css";
+@import "destek.css";
+@import "destek.css";
