@@ -1,0 +1,283 @@
+:root{
+	--renk1: #F0F0F0;
+	--renk2: #232443;
+	--renk3: #4A4D8F;
+	--renk4: #ffffff;
+
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a{
+	text-decoration: none;
+	color: var(--renk2);
+}
+a:focus{
+	outline-color: var(--renk2);
+}
+
+h1, h2, h3, h4, h5{
+	font-family: 'Poppins', sans-serif;
+}
+
+.container{
+	width: 90%;
+	margin: 0 auto;
+}
+
+.t-a-c{
+	text-align: center;
+}
+
+li {list-style: none;}
+
+section{
+	padding: 9rem 3rem 3rem 3rem; 
+	min-height: calc(100vh - 7.125rem);
+}
+
+a.btn:focus{outline: 0;}
+a.btn{
+	display: inline-block;
+	padding: .65rem 1.5rem;
+	background: var(--renk2);
+	color: var(--renk1);
+	border-radius: .4rem;
+	overflow: hidden;
+	transition: all .5s;   
+	border: 1px solid var(--renk1);
+}
+a.btn:hover{
+	background: var(--renk1);
+	color: var(--renk2);
+	border: 1px solid var(--renk2);
+}
+
+body{
+	background: var(--renk1);
+	color: var(--renk2);
+	font-family: 'Roboto', sans-serif;
+}
+
+/* 
+	Header
+	*/
+	header{
+		position: sticky;
+		top: 0;
+		background: var(--renk1)
+	}
+
+	header .container{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 25px;
+	}
+	header .container .logo h1{
+		line-height: 1;
+	}
+	header .container .logo h1 span{
+		color: var(--renk3);
+	}
+	header .menu{
+		display: flex;
+		align-items: center;
+	}
+	header .menu-link{
+		display: inline-block;
+		padding: 10px 20px;
+		font-size: 18px;
+		font-weight: 500;
+		position: relative;
+	}
+	header .menu-link::after{
+		position: absolute;
+		content: "";
+		width: 20%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		height: 2px;
+		border-radius: 2px;
+		background: var(--renk2);
+		margin: 0 auto;
+		opacity: 0;
+		transition: all .5s ease-in-out;
+	}
+	header .menu-link:hover::after{
+		opacity: 1;
+		width: 75%;
+	}
+	header .menu-link:active::after{
+		opacity: 1;
+		width: 75%;
+	}
+
+/* 
+	Hero
+	*/
+	.hero .row{
+		display: flex;
+		align-items: center;
+	}
+	.hero .row .col6{
+		width: 50%;
+		flex: 1;
+	}
+	.hero .row .col6 h1{
+		line-height: 1.3;
+		padding-bottom: 1rem;
+	}
+	.hero .row .col6 img{
+		width: 100%;
+	}
+	.hero .row .col6 p{
+		width: 90%;
+		padding-bottom: 1rem;
+	}
+
+
+/* 
+	About
+	*/
+	.about{
+		background-color: var(--renk4) ;
+	}
+	.about .container .row + .row {
+		display: flex;
+		align-items: flex-start;
+		padding-top: 4rem;
+	}
+	.about .container .row h2{
+		font-size: 2rem;
+	}
+	.about .container .row h5{
+		font-weight: normal;
+		font-size: 1rem;
+	}
+	.about .col6{
+		width: 50%;
+		flex: 1;
+	}
+	.about .col6 img {
+		width: 100%;
+	}
+	.about .col6 + .col6{
+		padding-top: 4rem;
+		padding-left: 2rem;
+	}
+	.about .col6 + .col6 p {
+		padding-top: 1rem;
+	}
+
+/* 
+	Services
+	*/
+	.services{
+		background-color: var(--renk1);
+	}
+	.services .row.t-a-c{
+		padding: 3rem 0;
+	}
+	.services .row.t-a-c h2{
+		font-size: 2rem;
+	}
+	.services .row{
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.services .row .item{
+		display: flex;
+		flex-direction: column;
+		width: 40%;
+		justify-self: flex-start;
+		align-items: center;
+	}
+	.services .row .item:nth-child(1) h1{
+		padding-top: 3rem;
+	}
+	.services .row .item img{
+		width: 100%;
+		max-width: 18.75rem;
+	}
+	.services .row .item + .item img{
+		max-height: 13.680625rem;
+		border-radius: 50%;
+		overflow: hidden;
+		clip-path: polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 49% 90%, 20% 90%, 0% 70%, 0% 35%, 20% 10%);
+	}
+	.services .row .item p{
+		padding: 1rem 0;
+	}
+
+/* 
+	Porfolio
+	*/
+	.portfolio{
+		background-color: var(--renk4);
+	}
+	.portfolio .row.t-a-c{
+		padding: 3rem 0;
+	}
+	.portfolio .row.t-a-c h2{
+		font-size: 2rem;
+	}
+	.portfolio .row {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.portfolio .item{
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		position: relative;
+	}
+	.portfolio .item:not(:last-child){
+		margin-right: 1rem;
+	}
+	.portfolio .item a{
+		display: inline-block
+	}
+	.portfolio .item a .item-img img{
+		max-height: 30rem ;
+		overflow: hidden;
+		border-radius: .5rem;
+	}
+	.portfolio .item::after{
+		position: absolute;
+		content: "";
+		top: 29px;
+		left: 0;
+		height: 150px;
+		width: 300px;
+		border-radius: .5rem;
+		background: #0000006e;
+		opacity: 0;
+	}
+	.portfolio .item a .item-img{
+		position: relative;
+	}
+	.portfolio .item a .item-img::after{
+		position: absolute;
+		font-family: "Font Awesome 5 Free";
+  		font-weight: 900;
+  		content: "\f002";
+		top: 50%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		opacity: 0;
+		color: white;
+		z-index: 3;
+	}
+	.portfolio .item:hover::after,
+	.portfolio .item a .item-img:hover::after{
+		opacity: 1;
+	}
