@@ -4,29 +4,148 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Ercüment Laçın Web Dev</title>
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<script src="https://kit.fontawesome.com/1735205657.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-	<div class="grid">
-		<div class="row v">
-			<h1>Bazı Çalışmalarım</h1>
-			<br>
-			<hr>
+	<header id="header">
+		<div id="navbar" class="container ">
+			<a href="index.html" class="logo t-a-c">
+				<h1>ercüment <br> <span>lacin</span></h1>
+			</a>
+			<nav class="menu">
+				<li class="menu-item">
+					<a href="#home" class="menu-link js-anchor-link">Home</a>
+				</li>
+				<li class="menu-item">
+					<a href="#about" class="menu-link js-anchor-link">About</a>
+				</li>
+				<li class="menu-item">
+					<a href="#services" class="menu-link js-anchor-link">Services</a>
+				</li>
+				<li class="menu-item">
+					<a href="#portfolio" class="menu-link js-anchor-link">Portfolio</a>
+				</li>
+				<li class="menu-item">
+					<a href="#contact" class="menu-link js-anchor-link">Contact</a>
+				</li>
+			</nav>
 		</div>
-		<div class="row h">
-			<div class="col">
-				<a href="ernestthornhilll.github.io/theme1/index.html">
-					<img src="http://placehold.it/300x300/ccc/333.png?text=placeholder" alt="">
-					<h3>Tasarım 1</h3>
+	</header><!-- /header -->
+
+	<section  id="home"  class="hero">
+		<div class="container">
+			<div class="row">
+				<div class="col6">
+					<h4>Hi There !</h4>
+					<h1>I'm a Web Develooper <br>& Graphic Designer</h1>
+					<p>Lorem ipsum, dolor, sit amet consectetur adipisicing elit. Laboriosam modi minima nesciunt ex. Hic illum possimus recusandae voluptatem eos aliquid maxime voluptate. Nemo, debitis vitae quaerat impedit animi sunt nisi omnis dicta quidem blanditiis dolorum itaque nostrum dolore at obcaecati voluptatem dolorem illum architecto! Rem culpa reiciendis sunt tenetur, nobis.</p>
+					<a href="#contact" class="btn">Hire Me !</a>
+				</div>
+				<div class="col6">
+					<img src="css/images/heroBg.jpg" alt="">
+				</div>
+			</div>
+		</div>
+	</section><!-- /hero -->
+
+	<section class="about" id="about">
+		<div class="container">
+			<div class="row t-a-c">
+				<h2>About Me</h2><br>
+				<h5>I Design <i class="fas fa-paint-brush"></i> Art Beautiful Things <i class="fas fa-paint-brush"></i> I love What I do</h5>
+			</div>
+			<div class="row">
+				<div class="col6">
+					<img src="css/images/aboutBg.png" alt="">
+				</div>
+				<div class="col6">
+					<h3>Why hire me for your next project ?</h3><br>
+					<p>My name is Ercüment Laçın, I am a mathematics teacher and web developer.. I started this business to make a living while still at home. </p>
+					<p>I spent a three year teaching myself the right way to make websites and learning to write the code myself. </p>
+				</div>
+			</div>
+		</div>
+	</section><!-- /about -->
+
+	<section class="services" id="services">
+		<div class="row t-a-c">
+			<h2>Services</h2>
+		</div>
+		<div class="row">
+			<div class="item">
+				<img src="css/images/web-developer.png">
+				<h1>Web Design</h1>
+				<p>I specialize in small business web design and development. Every line of code is written by hand to ensure the best performance, which helps bring in more customers to your site and bring more revenue to your business.</p>
+			</div>
+			<div class="item">
+				<img src="css/images/item1.png" alt="">
+				<h1>Logo & Banner Design</h1>
+				<p>Modern and simple designs are made for your businesses and personal needs.</p>
+			</div>
+		</div>
+	</section> <!-- services end -->
+
+	<section class="portfolio" id="portfolio">
+		<div class="row t-a-c">
+			<h2>Portfolio</h2>
+		</div>
+		<div class="row">
+			<div class="item">
+				<a href="https://ernestthornhilll.github.io/ernestthornhilll.github.io/theme2/index.html">			<h3>Design 1</h3>
+					<div class="item-img">
+						<img src="css/images/theme1minimal.png">
+					</div>
+					<div class="item-view">
+						<i class="fas fa-search"></i>
+					</div>
 				</a>
 			</div>
-			<div class="col">
-				<a href="ernestthornhilll.github.io/theme2/index.html">
-					<img src="http://placehold.it/300x300/ccc/333.png?text=placeholder" alt="">
-					<h3>Tasarım 2</h3>
+			<div class="item">
+				<a href="https://ernestthornhilll.github.io/ernestthornhilll.github.io/theme1/index.html">			<h3>Design 2</h3>
+					<div class="item-img">
+						<img src="css/images/theme2minimal.png">
+					</div>
+					<div class="item-view">
+						<i class="fas fa-search"></i>
+					</div>
 				</a>
 			</div>
 		</div>
-	</div>
+	</section> <!-- portfolio end -->
+
+	<section class="contact" id="contact">
+		<div class="row t-a-c">
+			<h2>Contact</h2>
+		</div>
+		<div class="row">
+			<div class="col6">
+				<form method="post" action="contact-form-process.php">
+					<input aria-label="name" type="text" id="name" name="name" placeholder="Name.." required="" tabindex="1">
+
+					<input aria-label="name" type="text" id="business" name="business" placeholder="Business" required="" tabindex="2">
+
+					<input aria-label="email" type="email" name="email" placeholder="Email Addres" required="" tabindex="3">
+
+					<textarea id="message" name="message" placeholder="Type your Message Here..." aria-label="write your message" tabindex="4"></textarea>
+					<input type="submit" value="Submit">
+				</form>
+			</div>
+			<div class="col6">
+				<img src="css/images/contact-vector.png">
+			</div>
+		</div>
+	</section> <!-- services end -->
+
+	<!-- JavaScript -->
+	<!-- jQuery first, then Popper.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+	<script src="css/js/scroll.js" type="text/javascript"></script>
+	
 </body>
 </html>
